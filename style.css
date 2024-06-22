@@ -59,9 +59,9 @@ body {
 }
 
 .hero {
-    position: absolute;
-    top: 95px;
-    left: 1000px;
+    position: relative;
+    left: 830px;
+    top: -258px;
 
 }
 
@@ -75,9 +75,45 @@ body {
     top: 72px;
 
 }
+#page{
+    position: relative;
+    overflow: hidden;
+}
+
+#loop{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    height: 25%;
+    width: 100%;
+    font-size: 100px;
+    white-space: nowrap;
+    font-family: gilroy;
+}
+#loop>h1{
+    font-weight: 400;
+    animation-name: anim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#loop>h1>span{
+    -webkit-text-stroke: 1.2px #fff7f7;
+    color: transparent;
+    font-weight: 500;
+}
+@keyframes anim{
+    0%{
+    transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
 
 .container {
     padding: 10px 10% 10%;
+
 }
 
 nav {
@@ -124,14 +160,14 @@ nav ul li a:hover::after {
     font-size: 30px;
 }
 
-.header-text h1 {
+/* .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
-}
+} */
 
-.header-text h1 span {
+/* .header-text h1 span {
     color: #ff004f;
-}
+} */
 
 /* ------about---- */
 
@@ -155,6 +191,8 @@ nav ul li a:hover::after {
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
+    position: relative;
+    top: 50px;
 }
 
 .about-col-2 {
@@ -434,6 +472,14 @@ nav ul li a:hover::after {
 }
 
 /* ----contact----- */
+
+#contact{
+    background-image: url(image/contact.svg);
+    background-repeat: no-repeat;
+    background-size: 51%;
+    background-position: top;
+}
+
 .contact-left {
     flex-basis: 35%;
 }
@@ -445,6 +491,8 @@ nav ul li a:hover::after {
 .contact-left p {
     margin-top: 30px;
 }
+
+
 
 .contact-left p i {
     color: #ff004f;
@@ -593,11 +641,19 @@ nav .fa-solid {
     .about-col-1 {
         margin-bottom: 30px;
     }
-
+    
+    .about-col-1 img{
+        top: 9px;
+    }
     .contact-left,
     .contact-right {
         flex-basis: 100%;
     }
+    #contact{
+        background-size: 160%;
+        background-position: left;
+    }
+    
 }
 
 
@@ -658,3 +714,4 @@ nav .fa-solid {
         margin: 0 -35px 0 35px;
     }
 }
+
